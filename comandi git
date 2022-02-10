@@ -1,0 +1,39 @@
+git init 
+git clone
+
+git status
+
+git log
+
+git add .
+
+git commit - m "messagge"  : committa i file presenti nell'area di staging
+
+git push :  invia tutti i commit locali verso un repository remoto
+
+git pull : operazione complementare al push...............................................
+
+git checkout <nome_branch> : il mio "HEAD" cambia riferimento di branche, vuol dire che i files nel mio hard disk cambieranno e si allinearro al repository scelto
+
+git checkout -b <nome_branch> : crea una nuova branch e la seleziono automaticamente 
+
+git merge branche_source : prendo i commit della branche_source e li porto dentro la branch attuale dove sono. 
+
+
+-------------------------------------------------------------
+se non ti va il git push usa questi comandi in ordine: 
+
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+clip < ~/.ssh/id_rsa.pub 
+(se quest'ultimo non funziona usa, chiudi il terminale e scrivi questo:  vi ~/.ssh/id_rsa.pub  ) 
+POI PRENTI L'SSH E VAI NELLE IMPOSTAZIONI DEL TUO PROFILO GIT  VAI SU "SSH and GPG  keys" E MODIFICA LA CHIAVE INSERENDO L'SSH 
+
+git status
+git push
+git log
+git remote add origin git@github.com:FlynnKing/NOME_FILE.git
+git push -u origin main
+-------------------------------------------------------------
+
